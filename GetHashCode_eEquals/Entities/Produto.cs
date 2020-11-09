@@ -10,5 +10,20 @@
             Nome = nome;
             Preco = preco;
         }
+
+        public override int GetHashCode()
+        {
+            return Nome.GetHashCode() + Preco.GetHashCode();
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (!(obj is Produto))
+            {
+                return false;
+            }
+            Produto outro = obj as Produto;
+            return Nome.Equals(outro.Nome) && Preco.Equals(outro.Preco);
+        }
     }
 }

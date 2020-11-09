@@ -19,6 +19,8 @@ namespace GetHashCode_eEquals
             Produto prod = new Produto("Notebook", 1200.0);
             Console.WriteLine(conjuntoItem.Contains(prod));
 
+
+            Console.ReadKey();
         }
     }
 }
