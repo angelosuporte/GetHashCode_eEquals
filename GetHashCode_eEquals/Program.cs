@@ -1,5 +1,6 @@
 ﻿using System;
 using GetHashCode_eEquals.Entities;
+using System.Collections.Generic;
 
 namespace GetHashCode_eEquals
 {
@@ -7,12 +8,17 @@ namespace GetHashCode_eEquals
     {
         static void Main(string[] args)
         {
-            Cliente a = new Cliente { Nome = "Maria", Email = "maria@gmail.com" };
-            Cliente b = new Cliente { Nome = "Alex", Email = "alex@gmail.com" };
+            HashSet<Produto> conjuntoItem = new HashSet<Produto>();
+            conjuntoItem.Add(new Produto("TV", 900.0));
+            conjuntoItem.Add(new Produto("Notebook", 1200.0));
 
-            Console.WriteLine(a.Equals(b));
-            Console.WriteLine(a.GetHashCode());
-            Console.WriteLine(b.GetHashCode());
+            HashSet<Ponto> conjuntoCartesiano = new HashSet<Ponto>();
+            conjuntoCartesiano.Add(new Ponto(3, 4));
+            conjuntoCartesiano.Add(new Ponto(5, 10));
+
+            Produto prod = new Produto("Notebook", 1200.0);
+            Console.WriteLine(conjuntoItem.Contains(prod));
+
         }
     }
 }
