@@ -10,6 +10,8 @@
             Nome = nome;
             Preco = preco;
         }
+        //Precisa implementar GetHashCode e Equals porque quando o tipo é class ele compara por referencia de memória. Com a implementação abaixo 
+        //será possível comparar o conteúdo
 
         public override int GetHashCode()
         {

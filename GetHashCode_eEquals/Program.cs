@@ -19,6 +19,9 @@ namespace GetHashCode_eEquals
             Produto prod = new Produto("Notebook", 1200.0);
             Console.WriteLine(conjuntoItem.Contains(prod));
 
+            Ponto novoPonto = new Ponto(5, 10); //resultado true porque quando o tipo é struct compara por conteúdo
+            Console.WriteLine(conjuntoCartesiano.Contains(novoPonto));
+
 
             Console.ReadKey();
         }

@@ -10,5 +10,7 @@
             X = x;
             Y = y;
         }
+
+        //Não precisa implementar GetHashCode e Equals porque quando o tipo é struct ele compara por conteúdo
     }
 }
